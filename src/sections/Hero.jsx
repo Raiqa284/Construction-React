@@ -1,5 +1,5 @@
 import React from 'react';
-import heroimg from '../assets/heroimg.png'
+import heroimg from '../assets/heroimg.png'//need to remove this 
 import backgroundImg from '../assets/homeimg.webp'
 import {motion} from 'framer-motion'
 import { slideUpVariants , zoomInVariants } from './animation';
@@ -17,14 +17,14 @@ const Hero = () => {
            >
             <motion.h1
                 variants={slideUpVariants}
-                className='text-yellow-500 text-2xl'
+                className='text-pink-500 text-2xl'
             >WE ARE BUILDERS 
             </motion.h1>
             <motion.h1
                 variants={slideUpVariants}
                 className='text-white uppercase text-[50px] font-bold'
             >we will build your dream </motion.h1>
-            <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+            <div className='w-[120px] h-[6px] bg-pink-500'></div>
             <p className='text-white text-[20px]'>Whether you’re dreaming of a new structure or enhancing an existing space, Sumon Structures is here to make it happen. With unmatched expertise and dedication, we ensure a smooth building experience from start to finish.</p>
 
             <motion.div
@@ -35,20 +35,20 @@ const Hero = () => {
                 >
                     <motion.button
                     variants={zoomInVariants}
-                    className='bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold'
+                    className='bg-pink-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold'
                     >
                         READ MORE
 
                     </motion.button>
                     <motion.button
                     variants={zoomInVariants}
-                    className='border-white hover:border-yellow-500 hover:text-yellow-500 border-2 px-10 py-3 rounded-lg text-white font-bold'>
+                    className='border-white hover:border-pink-500 hover:text-pink-500 border-2 px-10 py-3 rounded-lg text-white font-bold'>
                         REACH US
                     </motion.button>
 
             </motion.div>
            </motion.div>
-           <div className='w-[40%] flex flex-col justify-end items-end'>
+           {/* <div className='w-[40%] flex flex-col justify-end items-end'>
             <motion.img
             initial='hidden'
             whileInView='visible'
@@ -57,7 +57,7 @@ const Hero = () => {
                 alt='hero image'
                 className='lg:h-[600px] h-[300px] lg:mb-[-100px]'
                 />
-           </div>
+           </div> */}
         </div>
     );
 };
