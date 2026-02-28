@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -10,35 +10,35 @@ const Footer = () => {
     return (
         <footer className='bg-gray-900 text-white py-6 relative'>
             <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
+                
                 {/* Brand */}
                 <h1 className='text-xl md:text-2xl font-bold'>
                     BARNES <span className='text-pink-500 italic'>DEVELOPMENTS</span>
                 </h1>
                 
-                {/* Links */}
+                {/* Social Links */}
                 <div className='flex gap-6 mt-4 md:mt-0'>
+                    
+                    {/* Instagram */}
                     <a
-                        href='https://github.com/sumu9897'
+                        href='https://instagram.com/barnes_projects'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='hover:text-pink-500 transition-colors duration-300'
                     >
-                        <FaGithub size={24} />
+                        <FaInstagram size={24} />
                     </a>
+
+                    {/* WhatsApp */}
                     <a
-                        href='https://linkedin.com/in/md-sumon9897'
+                        href='https://wa.me/27700000000'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='hover:text-pink-500 transition-colors duration-300'
+                        className='hover:text-green-500 transition-colors duration-300'
                     >
-                        <FaLinkedin size={24} />
+                        <FaWhatsapp size={24} />
                     </a>
-                    <a
-                        href='mailto:mohammad.sumon9897@gmail.com'
-                        className='hover:text-pink-500 transition-colors duration-300'
-                    >
-                        <FaEnvelope size={24} />
-                    </a>
+
                 </div>
 
                 {/* Copyright */}

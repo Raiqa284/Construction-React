@@ -7,7 +7,7 @@ import Portfolio from './sections/Portfolio';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import Working from './sections/Working';
-import Testimonials from './sections/Testimonials';
+// import Testimonials from './sections/Testimonials';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Services/>
       <Portfolio/>
       <Working/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <Contact/>
       <Footer/>
     
