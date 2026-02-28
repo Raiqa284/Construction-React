@@ -13,7 +13,7 @@ const About = () => {
             >
                 <motion.h1
                 variants={slideUpVariants}
-                className='uppercase text-yellow-500 text-2xl'
+                className='uppercase text-pink-500 text-2xl'
                 >
                     Welcome to
                 </motion.h1>
@@ -23,7 +23,7 @@ const About = () => {
                 >
                     Barnes Developments
                 </motion.h1>
-                <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+                <div className='w-[120px] h-[6px] bg-pink-500'></div>
                 <p className='text-3xl italic text-gray-50 mt-[60px]'>Your Trusted Partner in Construction for Over 25 Years</p>
 
             </motion.div>
@@ -38,7 +38,7 @@ const About = () => {
                 <p className='text-white text-lg text-justify'>Explore our extensive portfolio and discover why we are the go-to builders for projects across the region.</p>
                 <motion.button
                 variants={zoomInVariants}
-                className='bg-yellow-500 hover:bg-white  text-white hover:text-black py-3 px-10 rounded-md hover:bg-yellow
+                className='bg-pink-500 hover:bg-white  text-white hover:text-black py-3 px-10 rounded-md hover:bg-pink
                 -600 transition duration-300 font-bold'
                 >
                 

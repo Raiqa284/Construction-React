@@ -14,7 +14,7 @@ const Contact = () => {
             >
                 <motion.h1
                 variants={slideUpVariants}
-                className='uppercase text-yellow-500 text-2xl'
+                className='uppercase text-pink-500 text-2xl'
                 >
                     Contact Us
                 </motion.h1>
@@ -24,7 +24,7 @@ const Contact = () => {
                 >
                     Reach Us For Any Query
                 </motion.h1>
-                <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+                <div className='w-[120px] h-[6px] bg-pink-500'></div>
                 <p className='text-3xl italic text-gray-600 mt-[60px]'>We are the leader with 25 years of experience in the construction market!</p>
 
             </motion.div>
@@ -46,7 +46,7 @@ const Contact = () => {
                         <textarea type='text' rows='4' placeholder='Your Message' className='px-6 py-3 border-[2px] border-black w-full text-black rounded-lg'/>
                         <motion.button
                             variants={zoomInVariants}
-                            className='bg-yellow-500 hover:bg-black text-black hover:text-white font-bold py-4 px-6 rounded-lg w-full'
+                            className='bg-pink-500 hover:bg-black text-black hover:text-white font-bold py-4 px-6 rounded-lg w-full'
                             >SUBMIT</motion.button>
                 </motion.form>
             </motion.div>

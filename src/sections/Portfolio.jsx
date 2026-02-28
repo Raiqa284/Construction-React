@@ -1,61 +1,93 @@
-import React from 'react';
-import project1 from '../assets/project1.jpg'
-import project2 from '../assets/project2.jpg'
-import project3 from '../assets/project3.jpg'
-import project4 from '../assets/project4.jpg'
-import project5 from '../assets/project5.jpg'
-import project6 from '../assets/project6.jpg'
-import project7 from '../assets/project7.jpg'
-import project8 from '../assets/project8.jpg'
-
-import {motion} from 'framer-motion'
-import { slideUpVariants , zoomInVariants } from './animation';
+import React, { useRef } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { slideUpVariants, zoomInVariants } from './animation';
 
 const Portfolio = () => {
-    return (
-        <div id='projects' className='w-full'>
-            <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={slideUpVariants}
-            className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
+  const scrollRef = useRef(null);
 
-            >
-                <motion.h3
-                variants={slideUpVariants}
-                className='text-yellow-500 text-2xl uppercase'
-                >
-                    portfolio
-                </motion.h3>
-                <motion.h2
-                variants={slideUpVariants}
-                className='uppercase text-white text-5xl font-bold text-center'
-                >Our Best Projects</motion.h2>
-                <motion.div
-                variants={zoomInVariants}
-                className='w-[120px] h-[6px] bg-yellow-500'
-                >
-                </motion.div>
-                <motion.div
-                initial='hidden'
-                whileInView='visible'
-                variants={zoomInVariants}
-                className='w-full m-auto grid lg:grid-cols-4 grid-cols-1'
-                >
-                    <img src={project1} alt="" className='h-[250px] w-full'/>
-                    <img src={project2} alt="" className='h-[250px] w-full'/>
-                    <img src={project3} alt="" className='h-[250px] w-full'/>
-                    <img src={project4} alt="" className='h-[250px] w-full'/>
-                    <img src={project5} alt="" className='h-[250px] w-full'/>
-                    <img src={project6} alt="" className='h-[250px] w-full'/>
-                    <img src={project7} alt="" className='h-[250px] w-full'/>
-                    <img src={project8} alt="" className='h-[250px] w-full'/>
-                </motion.div>
+  // 🔥 AUTO IMPORT ALL IMAGES FROM src/projects
+  const images = Object.values(
+    import.meta.glob('../projects/*.{png,jpg,jpeg,svg}', {
+      eager: true,
+    })
+  ).map((module) => module.default);
 
-            </motion.div>
-            
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 340;
+
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <div id="projects" className="w-full bg-black relative">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={slideUpVariants}
+        className="lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col items-center gap-[20px]"
+      >
+        <motion.h3
+          variants={slideUpVariants}
+          className="text-pink-500 text-2xl uppercase"
+        >
+          Portfolio
+        </motion.h3>
+
+        <motion.h2
+          variants={slideUpVariants}
+          className="uppercase text-white text-5xl font-bold text-center"
+        >
+          Our  Projects
+        </motion.h2>
+
+        <motion.div
+          variants={zoomInVariants}
+          className="w-[120px] h-[6px] bg-pink-500"
+        />
+
+        <div className="relative w-full mt-6">
+
+          {/* Left Arrow */}
+          <button
+            onClick={() => scroll('left')}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-white p-3 bg-black bg-opacity-50 rounded-full hover:bg-opacity-80"
+          >
+            <FaArrowLeft size={24} />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scroll('right')}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-white p-3 bg-black bg-opacity-50 rounded-full hover:bg-opacity-80"
+          >
+            <FaArrowRight size={24} />
+          </button>
+
+          <motion.div
+            ref={scrollRef}
+            variants={zoomInVariants}
+            className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory"
+          >
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Project ${index + 1}`}
+                className="h-[250px] w-[320px] object-cover rounded-xl flex-shrink-0 snap-center"
+              />
+            ))}
+          </motion.div>
+
         </div>
-    );
+      </motion.div>
+    </div>
+  );
 };
 
 export default Portfolio;

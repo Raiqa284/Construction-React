@@ -23,12 +23,18 @@ const Header = () => {
     ];
 
     return (
-        <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-4 top-0 z-50'>
-            <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>
-<h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>
-    BARNES <span className='text-pink-500 italic'>DEVELOPMENTS</span>
-</h1>
-            </h1>
+<nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-4 top-0 z-50'>
+
+  <div className="flex items-center gap-3">
+    <img 
+      src={logo} 
+      alt="Barnes Developments Logo" 
+      className="h-20 w-auto object-contain"
+    />
+    <h1 className="text-black md:text-2xl text-xl font-bold font-rubik">
+      BARNES <span className="text-pink-500 italic">DEVELOPMENTS</span>
+    </h1>
+  </div>
             {/* Desktop Menu */}
             <ul className='lg:flex justify-normal items-center gap-6 hidden'>
                 {navItem.map((item, index) => (

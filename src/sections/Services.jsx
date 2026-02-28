@@ -15,7 +15,7 @@ const Services = () => {
             >
                 <motion.h3
                 variants={slideUpVariants}
-                className='text-yellow-500 text-2xl uppercase'
+                className='text-pink-500 text-2xl uppercase'
                 >
                     Special Offer
                 </motion.h3>
@@ -25,7 +25,7 @@ const Services = () => {
                 >Our Best Services</motion.h2>
                 <motion.div
                 variants={zoomInVariants}
-                className='w-[120px] h-[6px] bg-yellow-500'
+                className='w-[120px] h-[6px] bg-pink-500'
                 >
                 </motion.div>
                 <motion.div
@@ -42,7 +42,7 @@ const Services = () => {
                             variants={zoomInVariants}
                             className='flex justify-center items-start gap-5 p-8'
                             >
-                                    <img src={service.icon} alt='icon' className='w-[70px] border-2 border-yellow-500 hover:bg-yellow-500 rounded-lg p-2'/>
+                                    <img src={service.icon} alt='icon' className='w-[70px] border-2 border-pink-500 hover:bg-pink-500 rounded-lg p-2'/>
                                     <div className='flex flex-col justify-center items-start gap-3'>
                                         <h3 className='text-xl font-bold text-black'>{service.title}</h3>
                                         <p className='text-[18px]'>{service.about}</p>

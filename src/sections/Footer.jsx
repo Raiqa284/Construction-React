@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
                 {/* Brand */}
                 <h1 className='text-xl md:text-2xl font-bold'>
-                    MS <span className='text-yellow-500 italic'>Structure</span>
+                    BARNES <span className='text-pink-500 italic'>DEVELOPMENTS</span>
                 </h1>
                 
                 {/* Links */}
@@ -21,7 +21,7 @@ const Footer = () => {
                         href='https://github.com/sumu9897'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='hover:text-yellow-500 transition-colors duration-300'
+                        className='hover:text-pink-500 transition-colors duration-300'
                     >
                         <FaGithub size={24} />
                     </a>
@@ -29,13 +29,13 @@ const Footer = () => {
                         href='https://linkedin.com/in/md-sumon9897'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='hover:text-yellow-500 transition-colors duration-300'
+                        className='hover:text-pink-500 transition-colors duration-300'
                     >
                         <FaLinkedin size={24} />
                     </a>
                     <a
                         href='mailto:mohammad.sumon9897@gmail.com'
-                        className='hover:text-yellow-500 transition-colors duration-300'
+                        className='hover:text-pink-500 transition-colors duration-300'
                     >
                         <FaEnvelope size={24} />
                     </a>
@@ -43,14 +43,14 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <p className='text-sm mt-4 md:mt-0'>
-                    &copy; {new Date().getFullYear()} MS Structure. All rights reserved.
+                    &copy; {new Date().getFullYear()} Barnes Developments. All rights reserved.
                 </p>
             </div>
 
             {/* Scroll to Top Button */}
             <button
                 onClick={scrollToTop}
-                className='fixed bottom-8 right-8 bg-yellow-500 text-black p-3 rounded-full shadow-lg hover:bg-black hover:text-white transition-colors duration-300'
+                className='fixed bottom-8 right-8 bg-pink-500 text-black p-3 rounded-full shadow-lg hover:bg-black hover:text-white transition-colors duration-300'
                 aria-label='Scroll to top'
             >
                 <FaArrowUp size={20} />
