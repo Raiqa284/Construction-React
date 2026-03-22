@@ -1,40 +1,44 @@
-import building from "../src/assets/building.svg";
-import construction from "../src/assets/construction.svg";
-import design from "../src/assets/design.svg";
-import document from "../src/assets/document.svg";
-import paint from "../src/assets/paint.svg";
-import support from "../src/assets/support.svg";
+import building from "./assets/building.svg";
+import construction from "./assets/construction.svg";
+import design from "./assets/design.svg";
+import document from "./assets/document.svg";
+import paint from "./assets/paint.svg";
+import support from "./assets/support.svg";
+import home from "./assets/home.png";
+import window from "./assets/window.png";
+import management from "./assets/management.png";
+import sink from "./assets/sink.png";
 
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { FaSitemap } from "react-icons/fa";
 
-import client1 from "../src/assets/client1.png";
-import client2 from "../src/assets/client2.png";
-import client3 from "../src/assets/client3.png";
+import client1 from "./assets/client1.png";
+import client2 from "./assets/client2.png";
+import client3 from "./assets/client3.png";
 
 export const allservices = [
   {
-    icon: building,
+    icon: home,
     title: "Building Renovation",
     about:
       "Expert renovation services to upgrade and modernize existing structures, enhancing functionality and aesthetic appeal.",
   },
   {
-    icon: construction,
+    icon: window,
     title: "Construction Services",
     about:
       "Comprehensive construction solutions, from project planning to execution, ensuring high-quality and timely completion.",
   },
   {
-    icon: design,
+    icon: management,
     title: "Design & Planning",
     about:
       "Professional design and planning services to create efficient and innovative spaces tailored to client needs.",
   },
   {
-    icon: document,
+    icon: sink,
     title: "Documentation",
     about:
       "Detailed documentation for all project stages, providing clear records and ensuring compliance with industry standards.",
@@ -52,7 +56,6 @@ export const allservices = [
       "Dedicated customer support to assist with inquiries, provide updates, and ensure a smooth project experience from start to finish.",
   },
 ];
-
 
 export const planning = [
   {
@@ -81,7 +84,6 @@ export const planning = [
   },
 ];
 
-
 export const clients = [
   {
     image: client1,
@@ -105,4 +107,3 @@ export const clients = [
     post: "Builder",
   },
 ];
-
