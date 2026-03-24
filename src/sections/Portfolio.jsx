@@ -43,8 +43,16 @@ const Portfolio = () => {
           variants={slideUpVariants}
           className="uppercase text-white text-5xl font-bold text-center"
         >
-          Our  Projects
+          Our Projects
         </motion.h2>
+
+        {/* ✅ ONLY CHANGE: added your sentence */}
+        <motion.p
+          variants={slideUpVariants}
+          className="text-white text-center text-[16px] sm:text-[18px] max-w-[700px] leading-relaxed"
+        >
+          Every project below started with a detailed quote. Every one of them finished at that price.
+        </motion.p>
 
         <motion.div
           variants={zoomInVariants}
@@ -85,7 +93,34 @@ const Portfolio = () => {
           </motion.div>
 
         </div>
+         <div className="w-full flex justify-center mt-12">
+  <motion.a
+    href="#contact"
+    variants={slideUpVariants}
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    className="
+      relative
+      px-10 py-4
+      rounded-full
+      text-white
+      font-semibold
+      text-lg
+      bg-pink-500
+      shadow-lg
+      shadow-pink-500/30
+      overflow-hidden
+      transition-all
+    "
+  >
+    Contact Us
+
+    {/* subtle glow effect */}
+    <span className="absolute inset-0 rounded-full opacity-20 blur-xl bg-white"></span>
+  </motion.a>
+</div>
       </motion.div>
+
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Portfolio from './sections/Portfolio';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import Working from './sections/Working';
+import Disclaimer from './sections/Disclaimer'
 // import Testimonials from './sections/Testimonials';
 
 
@@ -21,6 +22,7 @@ function App() {
       <Services/>
       <Portfolio/>
       <Working/>
+      <Disclaimer/>
       {/* <Testimonials/> */}
       <Contact/>
       <Footer/>
