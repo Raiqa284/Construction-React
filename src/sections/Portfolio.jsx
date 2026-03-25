@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
+import { Link } from 'react-scroll';
 
 const Portfolio = () => {
   const scrollRef = useRef(null);
@@ -94,8 +95,13 @@ const Portfolio = () => {
 
         </div>
          <div className="w-full flex justify-center mt-12">
-  <motion.a
-    href="#contact"
+  <Link
+  to="contact"
+  smooth={true}
+  duration={800}
+  offset={-100}
+>
+  <motion.div
     variants={slideUpVariants}
     whileHover={{ scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
@@ -111,13 +117,15 @@ const Portfolio = () => {
       shadow-pink-500/30
       overflow-hidden
       transition-all
+      cursor-pointer
     "
   >
     Contact Us
 
     {/* subtle glow effect */}
     <span className="absolute inset-0 rounded-full opacity-20 blur-xl bg-white"></span>
-  </motion.a>
+  </motion.div>
+</Link>
 </div>
       </motion.div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
-import logo from '../assets/logo.png';
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,10 +27,10 @@ const Header = () => {
 
   <div className="flex items-center gap-3">
     <img 
-      src={logo} 
-      alt="Barnes Developments Logo" 
-      className="h-20 w-auto object-contain"
-    />
+  src="/logo.png" 
+  alt="Barnes Developments Logo" 
+  className="h-20 w-auto object-contain"
+/>
     <h1 className="text-black md:text-2xl text-xl font-bold font-rubik">
       BARNES <span className="text-pink-500 italic">DEVELOPMENTS</span>
     </h1>

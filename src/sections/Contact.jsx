@@ -42,7 +42,7 @@ Message: ${message}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    const phoneNumber = "27659404673"; // 🔥 REPLACE with real number
+    const phoneNumber = "27659507900"; // 🔥 REPLACE with real number
 
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
