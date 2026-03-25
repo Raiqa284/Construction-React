@@ -36,22 +36,26 @@ const Header = () => {
     </h1>
   </div>
             {/* Desktop Menu */}
-            <ul className='lg:flex justify-normal items-center gap-6 hidden'>
-                {navItem.map((item, index) => (
-                    <li key={index}>
-                        <Link
-                            to={item.path}
-                            className='text-black uppercase font-bold cursor-pointer p-3 rounded-full hover:bg-pink-500 hover:text-black text-[16px]'
-                            spy={true}
-                            offset={-100}
-                            smooth={true}
-                        >
-                            {item.link}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            <button className='bg-pink-500 hover:bg-black text-black hover:text-white px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>REACH US</button>
+         <ul className='lg:flex justify-normal items-center gap-6 hidden'>
+  {navItem.map((item, index) => (
+    <li key={index}>
+      <Link
+        to={item.path}
+        className={`uppercase font-bold cursor-pointer text-[16px] ${
+          item.link === 'Contact'
+            ? 'bg-pink-500 text-black px-8 py-3 rounded-full hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300'
+            : 'text-black p-3 rounded-full hover:bg-pink-500 hover:text-black'
+        }`}
+        spy={true}
+        offset={-100}
+        smooth={true}
+      >
+        {item.link}
+      </Link>
+    </li>
+  ))}
+</ul>
+            {/* <button className='bg-pink-500 hover:bg-black text-black hover:text-white px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>REACH US</button> */}
 
             {/* Mobile Menu Toggle Icon */}
             <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>
@@ -65,19 +69,24 @@ const Header = () => {
             {/* Mobile Menu */}
             <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-pink-500 p-4 absolute top-[72px] left-0`} onClick={closeMenu}>
                 <ul className='flex flex-col justify-center items-center gap-2 w-full'>
-                    {navItem.map((item, index) => (
-                        <li key={index}>
-                            <Link
-                                to={item.path}
-                                className='text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center'
-                                spy={true}
-                                offset={-100}
-                                smooth={true}
-                            >
-                                {item.link}
-                            </Link>
-                        </li>
-                    ))}
+             {navItem.map((item, index) => (
+    <li key={index}>
+        <Link
+            to={item.path}
+            className={`uppercase font-bold cursor-pointer text-[16px] ${
+                item.link === 'Contact'
+                ? 'bg-pink-500 text-black px-6 py-2 rounded-full hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300'
+                : 'text-black p-3 rounded-full hover:bg-pink-500 hover:text-black'
+            }`}
+            spy={true}
+            offset={-100}
+            smooth={true}
+        >
+            {item.link}
+        </Link>
+    </li>
+))}
+                    
                 </ul>
             </div>
         </nav>
