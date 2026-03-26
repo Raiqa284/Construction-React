@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaArrowUp, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -9,17 +9,39 @@ const Footer = () => {
 
     return (
         <footer className='bg-gray-900 text-white py-6 relative'>
-            <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
+            <div className='container mx-auto flex flex-col md:flex-row justify-between items-center gap-4'>
                 
                 {/* Brand */}
                 <h1 className='text-xl md:text-2xl font-bold'>
                     BARNES <span className='text-pink-500 italic'>DEVELOPMENTS</span>
                 </h1>
                 
-                {/* Social Links */}
-                <div className='flex gap-6 mt-4 md:mt-0'>
+                {/* Contact Info */}
+                <div className='flex flex-col items-center gap-2 text-sm'>
                     
-                    {/* Instagram */}
+                    {/* Phone */}
+                    <a
+                        href='tel:+27659507900'
+                        className='flex items-center gap-2 hover:text-pink-500 transition'
+                    >
+                        <FaPhone />
+                        +27 65 950 7900
+                    </a>
+
+                    {/* Email */}
+                    <a
+                        href='mailto:info@barnesdev.co.za'
+                        className='flex items-center gap-2 hover:text-pink-500 transition'
+                    >
+                        <FaEnvelope />
+                        Barnesdevelopment1@gmail.com
+                    </a>
+
+                </div>
+
+                {/* Social Links */}
+                <div className='flex gap-6'>
+                    
                     <a
                         href='https://instagram.com/barnes_projects'
                         target='_blank'
@@ -29,7 +51,6 @@ const Footer = () => {
                         <FaInstagram size={24} />
                     </a>
 
-                    {/* WhatsApp */}
                     <a
                         href='https://wa.me/27659507900'
                         target='_blank'
@@ -42,7 +63,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <p className='text-sm mt-4 md:mt-0'>
+                <p className='text-sm'>
                     &copy; {new Date().getFullYear()} Barnes Developments. All rights reserved.
                 </p>
             </div>
