@@ -30,7 +30,7 @@ const Contact = () => {
 
     const whatsappMessage = `Hello, I would like to enquire:
 
-Name: ${name}
+// Name: ${name}
 Email: ${email}
 Phone: ${phone}
 Message: ${message}`;
