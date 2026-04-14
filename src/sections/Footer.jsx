@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className='flex gap-6'>
                     
                     <a
-                        href='https://instagram.com/barnes_projects'
+                        href='https://www.instagram.com/barnes_developments/'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='hover:text-pink-500 transition-colors duration-300'
