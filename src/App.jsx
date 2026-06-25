@@ -13,6 +13,7 @@ import Disclaimer from './sections/Disclaimer';
 
 import AdminLogin from './sections/AdminLogin';
 import Dashboard from './sections/Dashboard';
+import ProtectedRoute from './sections/ProtectedRoute'; // NEW: import the ProtectedRoute component
 
 function HomePage() {
   return (
@@ -35,7 +36,13 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/admin" element={<AdminLogin />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+
+      {/* NEW: Dashboard is now wrapped in ProtectedRoute — only logged in admins can access it */}
+      <Route path="/dashboard" element={
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      } />
     </Routes>
   );
 }

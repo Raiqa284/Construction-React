@@ -2,13 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCw4p28RteHGlHqzaZkjU2Il6WaGQvgCZ8",
-  authDomain: "azeez-login.firebaseapp.com",
-  projectId: "azeez-login",
-  storageBucket: "azeez-login.firebasestorage.app",
-  messagingSenderId: "227222115001",
-  appId: "1:227222115001:web:7b95a5e4abc598c268c168",
-  measurementId: "G-BP74RZ8TTQ"
+ apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
