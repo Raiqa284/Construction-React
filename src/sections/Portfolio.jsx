@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
+import { db } from './Firebase';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
@@ -8,22 +10,32 @@ const Portfolio = () => {
   const scrollRef = useRef(null);
 
   // 🔥 AUTO IMPORT ALL IMAGES FROM src/projects
-  const images = Object.values(
-    import.meta.glob('../projects/*.{png,jpg,jpeg,svg}', {
-      eager: true,
-    })
-  ).map((module) => module.default);
+const localImages = Object.values(
+  import.meta.glob('../projects/*.{png,jpg,jpeg,svg}', {
+    eager: true,
+  })
+).map((module) => module.default);
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = 340;
+const [uploadedImages, setUploadedImages] = useState([]);
 
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
+useEffect(() => {
+  async function loadImages() {
+    try {
+      const q = query(
+        collection(db, 'images'),
+        orderBy('createdAt', 'desc'),
+        limit(20)
+      );
+      const snapshot = await getDocs(q);
+      setUploadedImages(snapshot.docs.map((doc) => doc.data().url));
+    } catch (error) {
+      console.error('Could not load uploaded images:', error);
     }
-  };
+  }
+  loadImages();
+}, []);
+
+const allImages = [...uploadedImages, ...localImages];
 
   return (
     <div id="projects" className="w-full bg-black relative">
@@ -83,10 +95,10 @@ const Portfolio = () => {
             variants={zoomInVariants}
             className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory"
           >
-            {images.map((image, index) => (
+            {allImages.map((image, index) => (
               <img
                 key={index}
-                src={image}
+                src={image.replace('/upload/', '/upload/w_800,q_auto,f_auto/')}
                 alt={`Project ${index + 1}`}
                 className="h-[250px] w-[320px] object-cover rounded-xl flex-shrink-0 snap-center"
               />
