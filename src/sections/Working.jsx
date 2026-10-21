@@ -16,7 +16,7 @@ const Working = () => {
                     variants={slideUpVariants}
                     className='text-pink-500 text-2xl uppercase text-center'
                 >
-                    How A Proper Build Should Start
+
                 </motion.h3>
 
                 <motion.h2

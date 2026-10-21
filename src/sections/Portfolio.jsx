@@ -75,7 +75,6 @@ const scroll = (direction) => {
           variants={slideUpVariants}
           className="text-white text-center text-[16px] sm:text-[18px] max-w-[700px] leading-relaxed"
         >
-          Every project below started with a detailed quote. Every one of them finished at that price.
         </motion.p>
 
         <motion.div

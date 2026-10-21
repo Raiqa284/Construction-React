@@ -58,13 +58,13 @@ Message: ${message}`;
           </motion.h1>
 
           <motion.h1 variants={slideUpVariants} className='text-4xl sm:text-5xl font-bold text-black uppercase'>
-            Ready to build it properly?
+            Ready to build?
           </motion.h1>
 
           <div className='w-[120px] h-[6px] bg-pink-500'></div>
 
           <p className='text-lg text-gray-600 mt-6 leading-relaxed max-w-[500px]'>
-            Fill in your details below and I'll personally reach back to you to discuss your project.
+            Fill in your details below and we'll contact you to discuss your project.
           </p>
         </motion.div>
 

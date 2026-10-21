@@ -54,12 +54,12 @@ const About = () => {
                 </p>
 
                 <h3 className='text-white text-2xl font-bold'>
-                    A Quantity Surveyor Who Actually Builds
+                    A Quantity Surveyor Who Builds
                 </h3>
 
                 {/* Short intro */}
                 <p className='text-white text-lg leading-relaxed text-justify'>
-                    I'm a qualified Quantity Surveyor with 13 years of experience building homes across Cape Town.
+                    I'm a qualified Quantity Surveyor with over 10 years experience building homes across Cape Town.
                     Every project is carefully planned and costed before construction begins.
                 </p>
 
@@ -67,12 +67,13 @@ const About = () => {
                 {showMore && (
                     <>
                         <p className='text-white text-lg leading-relaxed text-justify'>
-                            Before a single brick is laid, every material, labour cost, and contingency is calculated line by line.
-                            Most cost overruns happen during the quoting stage when contractors underestimate to win the job.
+                            Every project begins with a detailed line-by-line breakdown including materials, labour, 
+                            and contingencies which eliminates cost overruns due to inaccurate or overly optimistic quotes.
                         </p>
 
                         <p className='text-white text-lg leading-relaxed text-justify'>
-                            I price properly from the start — which is why my quotes don’t suddenly change later.
+                            At Barnes Developments we focus on precise, fully loaded pricing from the start - 
+                            so our quotes reamin stable and transparent throughout the project.
                         </p>
 
                         <ul className='text-white text-lg mt-4 space-y-2'>

@@ -23,39 +23,33 @@ import client3 from "./assets/client3.png";
 export const allservices = [
   {
     icon: home,
-    title: "New Home Builds",
-    about:
-      "Backed by a NHBRC accreditation, and 13 years of experience to make sure it's built properly and on budget, from foundation to finish.",
+    title: "New Builds",
+
   },
   {
     icon: window,
-    title: "Windows & Doors",
-    about:
-      "Measured correctly. Fitted correctly. The kind of thing that should only need to be done once.",
+    title: "Windows & Doors Installation",
+
   },
   {
     icon: reinforced,
-    title: "Structural Work",
-    about:
-      "Foundations, load-bearing walls, slabs . All work that has to be right the first time. This is where experience and precision matter most.",
+    title: "Structural Work icnluding Foundations, load bearing walls and slabs",
+    
   },
   {
     icon: sink,
     title: "Kitchen & bathrooms",
-    about:
-      "The most used rooms in your home deserve proper workmanship. No rushed finishes, no cut corners, no surprise costs when the tiles are already on the wall.",
+
   },
   {
     icon: paint,
     title: "Renovations & Remodels",
-    about:
-      "Breathing new life into an existing home without the nightmare of spiralling costs. Every renovation is scoped, costed, and delivered as quoted.",
+  
   },
   {
     icon: extensions,
     title: "Additions & Extensions",
-    about:
-      "Adding space to your home is a structural decision, not just a cosmetic one. I make sure it's done right and integrated properly, built to last, and priced before a single wall comes down",
+    
   },
 ];
 
@@ -64,25 +58,25 @@ export const planning = [
     icon: IoDocumentTextSharp,
     title: "1.Make Contact",
     about:
-      "Detailed research and strategizing to establish project goals, requirements, and timelines for a successful outcome.",
+      "Get in touch by phone, email or through the contact form below and tell us about your project. We’ll get back to you to arrange a time to talk.",
   },
   {
     icon: MdOutlineDesignServices,
     title: "2.Consultation Meeting",
     about:
-      "Crafting user-centered designs, wireframes, and mockups to create a visually appealing and functional interface.",
+      "We meet at your property to see the space, take measurements and talk through what you want done, your budget and your timeline.",
   },
   {
     icon: FaRegBuilding,
     title: "3.Bill Of Quantities",
     about:
-      "Developing the core functionalities and implementing features with clean, efficient code to bring the design to life.",
+      "We list every material and every task the job needs, with the quantities and costs next to each one, so nothing is left to guesswork.",
   },
   {
     icon: FaSitemap,
-    title: "4.Your Qoute In writing",
+    title: "4.Your Quote In writing",
     about:
-      "Thorough testing, debugging, and deployment to ensure the project meets all specifications and functions seamlessly.",
+      "A written quote with the full price and the work it covers, so you know exactly where you stand before you decide.",
   },
 ];
 

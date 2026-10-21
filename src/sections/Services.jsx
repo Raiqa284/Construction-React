@@ -17,12 +17,12 @@ const Services = () => {
                 variants={slideUpVariants}
                 className='text-pink-500 text-2xl uppercase'
                 >
-                    Special Offer
+                    
                 </motion.h3>
                 <motion.h2
                 variants={slideUpVariants}
                 className='uppercase text-black text-5xl font-bold text-center'
-                >Our Best Services</motion.h2>
+                >Our Services</motion.h2>
                 <motion.div
                 variants={zoomInVariants}
                 className='w-[120px] h-[6px] bg-pink-500'

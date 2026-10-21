@@ -18,9 +18,9 @@ text-5xl font-bold text-white uppercase
         <div className="w-[120px] h-[6px] bg-pink-500 mx-auto mb-6"></div>
 
         <p className="text-white text-base md:text-lg leading-relaxed">
-          Your quote is valid for only <span className="font-semibold">30 days</span> from the date it's issued. 
-          After that, it may be subject to adjustment due to supplier price increases, something that affects 
-          every builder in the industry. We&apos;ll always notify you of any changes before proceeding, so you&apos;re 
+          Your quote is valid for <span className="font-semibold">30 days</span> from the date it's issued. 
+          Thereafter, it may be subject to adjustment due to supplier price increases,
+           We&apos;ll always notify you of any changes before proceeding, so you&apos;re 
           never caught off guard.
         </p>
 
