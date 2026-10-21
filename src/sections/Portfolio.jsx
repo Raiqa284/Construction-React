@@ -36,6 +36,17 @@ useEffect(() => {
 }, []);
 
 const allImages = [...uploadedImages, ...localImages];
+const scroll = (direction) => {
+  const container = scrollRef.current;
+  if (!container || !container.firstElementChild) return;
+
+  const itemWidth = container.firstElementChild.offsetWidth + 24; // image width + the gap-6 spacing
+
+  container.scrollBy({
+    left: direction === 'left' ? -itemWidth : itemWidth,
+    behavior: 'smooth',
+  });
+};
 
   return (
     <div id="projects" className="w-full bg-black relative">
