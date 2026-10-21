@@ -73,6 +73,7 @@ function Dashboard() {
       });
 
       alert("Image uploaded successfully!");
+      setImage(null);
       await loadImages();
     } catch (error) {
       console.error(error);
@@ -93,39 +94,74 @@ function Dashboard() {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h1>Admin Dashboard</h1>
-        <button onClick={handleLogout}>Logout</button>
+    <div className="min-h-screen bg-black text-white">
+      <div className="flex items-center justify-between border-b border-zinc-800 px-6 py-4">
+        <h1 className="text-xl font-bold uppercase">Admin Dashboard</h1>
+        <button
+          onClick={handleLogout}
+          className="border border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white rounded-full px-5 py-2 transition"
+        >
+          Logout
+        </button>
       </div>
 
-      <p>Upload new project image below:</p>
-      <input
-        type="file"
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-      <br /><br />
-      <button onClick={handleUpload} disabled={uploading}>
-        {uploading ? "Uploading..." : "Upload Image"}
-      </button>
-      <br /><br />
-      {image && (
-        <p>Selected file: {image.name}</p>
-      )}
+      <div className="max-w-6xl mx-auto px-6 py-10">
+        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-10">
+          <p className="text-pink-500 uppercase text-sm tracking-widest mb-4">
+            Upload new project image
+          </p>
 
-      <h2>Uploaded images</h2>
-      {savedImages.length === 0 && <p>No uploaded images yet.</p>}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
-        {savedImages.map((img) => (
-          <div key={img.id} style={{ width: "160px" }}>
-            <img
-              src={img.url.replace("/upload/", "/upload/w_200,q_auto,f_auto/")}
-              alt="Uploaded project"
-              style={{ width: "100%", borderRadius: "8px" }}
-            />
-            <button onClick={() => handleDelete(img.id)}>Delete</button>
-          </div>
-        ))}
+          <input
+            key={uploading ? "uploading" : "idle"}
+            type="file"
+            accept="image/*"
+            onChange={(e) => setImage(e.target.files[0])}
+            className="text-zinc-300 file:mr-4 file:rounded-full file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
+          />
+
+          {image && (
+            <p className="text-zinc-400 text-sm mt-3">
+              Selected file: {image.name}
+            </p>
+          )}
+
+          <button
+            onClick={handleUpload}
+            disabled={uploading}
+            className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full px-8 py-3 transition disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {uploading ? "Uploading..." : "Upload Image"}
+          </button>
+        </div>
+
+        <h2 className="text-white text-2xl font-bold uppercase mb-6">
+          Uploaded images ({savedImages.length})
+        </h2>
+
+        {savedImages.length === 0 && (
+          <p className="text-zinc-500">No uploaded images yet.</p>
+        )}
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {savedImages.map((img) => (
+            <div
+              key={img.id}
+              className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
+            >
+              <img
+                src={img.url.replace("/upload/", "/upload/w_400,q_auto,f_auto/")}
+                alt="Uploaded project"
+                className="w-full h-40 object-cover"
+              />
+              <button
+                onClick={() => handleDelete(img.id)}
+                className="w-full py-2 text-sm text-red-400 hover:bg-red-500 hover:text-white transition"
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
