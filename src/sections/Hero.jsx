@@ -67,7 +67,7 @@ const Hero = () => {
 
                         <p className='text-white text-[18px] leading-relaxed'>
                             What you need is someone who <strong>calculates instead of guessing</strong>. 
-                            With over <strong>13 years of experience in construction</strong>, I’ve built my 
+                            With over <strong>10 years of experience in construction</strong>, I’ve built my 
                             business around accuracy, reliability, and clear communication from start to finish.
                         </p>
                     </>

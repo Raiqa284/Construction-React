@@ -36,7 +36,7 @@ const About = () => {
                 <div className='w-[120px] h-[6px] bg-pink-500'></div>
 
                 <p className='text-2xl sm:text-3xl italic text-gray-50 mt-[40px]'>
-                    Your Trusted Construction Partner for Over 13 Years
+                    Your Trusted Construction Partner for Over 10 Years
                 </p>
             </motion.div>
 
@@ -57,33 +57,34 @@ const About = () => {
                     A Quantity Surveyor Who Builds
                 </h3>
 
-                {/* Short intro */}
-                <p className='text-white text-lg leading-relaxed text-justify'>
-                    I'm a qualified Quantity Surveyor with over 10 years experience building homes across Cape Town.
-                    Every project is carefully planned and costed before construction begins.
-                </p>
+               {/* Short intro */}
+<p className='text-white text-lg leading-relaxed text-justify'>
+    I'm a qualified Quantity Surveyor with over 10 years experience building homes across Cape Town.
+    Every project is carefully planned and costed before construction begins.
+</p>
 
-                {/* Hidden content */}
-                {showMore && (
-                    <>
-                        <p className='text-white text-lg leading-relaxed text-justify'>
-                            Every project begins with a detailed line-by-line breakdown including materials, labour, 
-                            and contingencies which eliminates cost overruns due to inaccurate or overly optimistic quotes.
-                        </p>
+{/* Always visible */}
+<ul className='text-white text-lg space-y-2'>
+    <li>✔ Qualified Quantity Surveyor</li>
+    <li>✔ 13 Years Experience</li>
+    <li>✔ New Builds & Renovations</li>
+    <li>✔ Quote Valid for 30 Days</li>
+</ul>
 
-                        <p className='text-white text-lg leading-relaxed text-justify'>
-                            At Barnes Developments we focus on precise, fully loaded pricing from the start - 
-                            so our quotes reamin stable and transparent throughout the project.
-                        </p>
+{/* Hidden content */}
+{showMore && (
+    <>
+        <p className='text-white text-lg leading-relaxed text-justify'>
+            Every project begins with a detailed line-by-line breakdown including materials, labour, 
+            and contingencies which eliminates cost overruns due to inaccurate or overly optimistic quotes.
+        </p>
 
-                        <ul className='text-white text-lg mt-4 space-y-2'>
-                            <li>✔ Qualified Quantity Surveyor</li>
-                            <li>✔ 13 Years Experience</li>
-                            <li>✔ New Builds & Renovations</li>
-                            <li>✔ Quote Valid for 30 Days</li>
-                        </ul>
-                    </>
-                )}
+        <p className='text-white text-lg leading-relaxed text-justify'>
+            At Barnes Developments we focus on precise, fully loaded pricing from the start - 
+            so our quotes remain stable and transparent throughout the project.
+        </p>
+    </>
+)}
 
                 {/* BUTTON */}
                 <motion.button
